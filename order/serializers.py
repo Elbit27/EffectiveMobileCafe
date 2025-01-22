@@ -10,6 +10,7 @@ class OrderListSerializer(serializers.ModelSerializer):
         fields = ('id', 'table_number', 'items', 'total_price')
 
 class OrderCreateUpdateSerializer(serializers.ModelSerializer):
+    items = serializers.StringRelatedField(many=True)  # Показывает строковое представление объектов Menu
     total_price = serializers.DecimalField(
         max_digits=10,
         decimal_places=2,

@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # inst_apps
     'rest_framework',
+    'django_filters',
     # my_apps
     'order',
 ]
